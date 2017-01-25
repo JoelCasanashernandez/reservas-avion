@@ -21,6 +21,12 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
     <!--  Custom Style -->
     <link href="assets/css/style.css" rel="stylesheet" />
+    <!-- JQueryUI css -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!--  JQuery Timepicker -->
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.timepicker.css">
+    <!-- JQuery Timepicker Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-datepicker.css">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -116,9 +122,19 @@
             <div class="div-trans text-center">
                 <h3>RESERVAS </h3>
                 <form id="FormReserva">
-                    <input type="number" class="form-control" required="required" placeholder="coste máximo">
-                    <input type="text" class="form-control" required="required" placeholder="Horario">
-                    <select class="form-control">
+                    <label for="priceRange">Precio Máximo: <span>750</span>€</label>
+                    <input type="range" id="maxPrice" name="maxPrice" class="form-control" required="required" value="750" min="50" max="1000">
+                    <label for="checkInTime">(Ida)A partir de: </label>
+                    <input type="text" id="checkInTime" class="time ui-timepicker-input" required="required">
+                    <label for="checkOutTime">(Vuelta)A partir de: </label>
+                    <input type="text" id="checkInOut" class="time ui-timepicker-input" required="required">
+                    <label for="checkIn">Fecha de salida</label>
+                    <input id="checkIn" type="text" class="form-control" name="checkin" placeholder="Ida" required="required">
+                    <label for="checkOut">Fecha de llegada</label>
+                    <input id="checkOut" type="text" class="form-control" name="checkout" placeholder="Vuelta" required="required">
+                    <label for="company">Compañía:</label>
+                    <select class="form-control" id="company">
+                    <option>Indiferencia</option>
                         <option >Iberia</option>
                         <option>Binter</option>
                         <option>CanaryFly</option>
@@ -143,7 +159,7 @@
     <div id="port-folio" class="pad-top-botm" >
         <table>
                     <tr>
-                        <th>Aerolínia</th>
+                        <th>Aerolínea</th>
                         <th>Origen-Destino</th>
                         <th>Horario</th>
                         <th>Coste</th>
@@ -265,6 +281,8 @@
 
     <!--  Jquery Core Script -->
     <script src="assets/js/jquery-1.10.2.js"></script>
+    <!-- Jquery UI -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!--  Core Bootstrap Script -->
     <script src="assets/js/bootstrap.js"></script>
      <!--  WOW Script -->
@@ -275,5 +293,13 @@
     <script src="assets/js/jquery.prettyPhoto.js"></script>
     <!--  Custom Scripts -->
     <script src="assets/js/custom.js"></script>
+    <!-- JQuery.Timepicker -->
+    <script src="assets/js/jquery.timepicker.js"></script>
+    <!-- Reserva Vuelos script -->
+    <script src="assets/js/vuelos.js"></script>
+    <!-- Form script -->
+    <script src="assets/js/searchForm.js"></script>
+
+    <script src="assets/js/bootstrap-datepicker.js"></script>
 </body>
 </html>
